@@ -20,13 +20,13 @@ fi
 
 # Export minikube home to goinfre & Initializing Minikube
 
-echo -e "\x1B[1;31m Starting Minikube, please wait...\x1B[0m"
+#echo -e "\x1B[1;31m Starting Minikube, please wait...\x1B[0m"
 export MINIKUBE_HOME=/goinfre/dalba-de/minikube
 minikube start --vm-driver=virtualbox
 
 # Bringing docker enviroment
 
-echo -e "\x1B[1;31m Bringing docker enviroment\x1B[0m"
+#echo -e "\x1B[1;31m Bringing docker enviroment\x1B[0m"
 eval $(minikube docker-env)
 
 # Enable minikube addons

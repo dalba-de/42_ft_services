@@ -12,8 +12,8 @@ fi
 echo "files:${PASSWORD}" |/usr/sbin/chpasswd
 chown files:files /home/files/ -R
 
-if [ -z $1 ]; then
+#if [ -z $1 ]; then
   /usr/sbin/vsftpd /etc/vsftpd/vsftpd.conf
-else
-  $@
-fi
+#else
+#  $@
+#fi
