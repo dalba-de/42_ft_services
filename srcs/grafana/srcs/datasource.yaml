@@ -1,0 +1,12 @@
+apiVersion: 1
+
+datasources:
+  - name: influxdb
+    type: influxdb
+    access: proxy
+    database: telegraf
+    user: root
+    password: root
+    url: http://influxdb:8086/
+    jsonData:
+      timeInterval: "15s"

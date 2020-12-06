@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ftp-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ftp
+  template:
+    metadata:
+      labels:
+        app: ftp
+    spec:
+      containers:
+      - name: ftp
+        image: my_ftp
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 20
+          name: ftp
+        - containerPort: 21
+          name: ftps
+        - containerPort: 10090
+          name: pasv-min-port
+        - containerPort: 10100
+          name: pasv-max-port
+        env:
+          - name: PASSWORD
+            value: password
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ftp-service
+  labels:
+    app: ftp
+spec:
+  type: LoadBalancer
+  ports:
+    - name: ftp
+      port: 20
+      targetPort: 20
+    - name: ftps
+      port: 21
+      targetPort: 21
+    - name: pasv-min-port
+      port: 10090
+      targetPort: 10090
+    - name: pasv-max-port
+      port: 10091
+      targetPort: 10091
+  selector:
+    app: ftp
