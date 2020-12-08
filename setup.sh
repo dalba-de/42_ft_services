@@ -20,13 +20,15 @@ fi
 
 # Export minikube home to goinfre & Initializing Minikube
 
-#echo -e "\x1B[1;31m Starting Minikube, please wait...\x1B[0m"
-export MINIKUBE_HOME=/goinfre/dalba-de/minikube
+echo -e "\x1B[1;31m Starting Minikube, please wait...\x1B[0m"
+#export MINIKUBE_HOME=/goinfre/dalba-de/minikube
+#ln -s /goinfre/dalba-de/.minikube /Users/dalba-de/.minikube
+printf "🐳 : Minikube installed\n"
 minikube start --vm-driver=virtualbox
 
 # Bringing docker enviroment
 
-#echo -e "\x1B[1;31m Bringing docker enviroment\x1B[0m"
+echo -e "\x1B[1;31m Bringing docker enviroment\x1B[0m"
 eval $(minikube docker-env)
 
 # Enable minikube addons
@@ -93,7 +95,55 @@ srcs/deployments/start.sh
 
 clear
 
-echo -e "\x1B[1;33m Successful deployment. Welcome to Fantabulous World of Kubernetes\x1B[0m"
+echo -e "\x1B[1;33m     _  _  _  _  _  _  _  _  _  _                       _  _  _  _    _  _  _  _  _  _  _  _  _     _           _  _  _  _    _  _  _     _  _  _  _  _   _  _  _  _     "
+echo -e "\x1B[1;33m    (_)(_)(_)(_)(_)(_)(_)(_)(_)(_)                    _(_)(_)(_)(_)_ (_)(_)(_)(_)(_)(_)(_)(_)(_) _ (_)         (_)(_)(_)(_)_ (_)(_)(_) _ (_)(_)(_)(_)(_)_(_)(_)(_)(_)_   "
+echo -e "\x1B[1;33m    (_)                  (_)                         (_)          (_)(_)            (_)         (_)(_)         (_)   (_)  (_)         (_)(_)           (_)          (_)  "
+echo -e "\x1B[1;33m    (_) _  _             (_)                         (_)_  _  _  _   (_) _  _       (_) _  _  _ (_)(_)_       _(_)   (_)  (_)            (_) _  _      (_)_  _  _  _     "
+echo -e "\x1B[1;33m    (_)(_)(_)            (_)                           (_)(_)(_)(_)_ (_)(_)(_)      (_)(_)(_)(_)     (_)     (_)     (_)  (_)            (_)(_)(_)       (_)(_)(_)(_)_   "
+echo -e "\x1B[1;33m    (_)                  (_)                          _           (_)(_)            (_)   (_) _       (_)   (_)      (_)  (_)          _ (_)            _           (_)  "
+echo -e "\x1B[1;33m    (_)                  (_)                         (_)_  _  _  _(_)(_) _  _  _  _ (_)      (_) _     (_)_(_)     _ (_) _(_) _  _  _ (_)(_) _  _  _  _(_)_  _  _  _(_)  "
+echo -e "\x1B[1;33m    (_)                  (_)                           (_)(_)(_)(_)  (_)(_)(_)(_)(_)(_)         (_)      (_)      (_)(_)(_)  (_)(_)(_)   (_)(_)(_)(_)(_) (_)(_)(_)(_)    "
+echo -e "\x1B[1;33m                                  _  _  _  _  _  _  _                                                                                                                    "
+echo -e "\x1B[1;33m                                 (_)(_)(_)(_)(_)(_)(_)                                                                                                                   "                                                                                           
+
+
+echo -e "\x1B[1;33m \t\t\t\t\t\tSuccessful deployment. Welcome to Fantabulous World of Kubernetes\x1B[0m"
+echo -e "\x1B[1;33m \t\t\t\t\t\t Try with 192.168.99.100 to go to the main page. Enjoy!\x1B[0m"
+echo ""
+echo ""
+echo -e "\x1B[1;31m #####################################################################"
+echo -e "\x1B[1;31m ##                              \x1B[1;32mSSH                                \x1B[1;31m##"
+echo -e "\x1B[1;31m #####################################################################"
+echo -e "\x1B[1;31m ##                               ##                                ##"
+echo -e "\x1B[1;31m ##                               ##                                ##"
+echo -e "\x1B[1;31m ##        \x1B[1;32madmin_ssh              \x1B[1;31m##              \x1B[1;32mpass              \x1B[1;31m##"
+echo -e "\x1B[1;31m ##                               ##                                ##"
+echo -e "\x1B[1;31m ##                               ##                                ##"
+echo -e "\x1B[1;31m #####################################################################"
+echo -e "\x1B[1;31m ##                              \x1B[1;32mFTPS                               \x1B[1;31m##"
+echo -e "\x1B[1;31m #####################################################################"
+echo -e "\x1B[1;31m ##                               ##                                ##"
+echo -e "\x1B[1;31m ##                               ##                                ##"
+echo -e "\x1B[1;31m ##          \x1B[1;32mfiles                \x1B[1;31m##            \x1B[1;32mpassword            \x1B[1;31m##"
+echo -e "\x1B[1;31m ##                               ##                                ##"
+echo -e "\x1B[1;31m ##                               ##                                ##"
+echo -e "\x1B[1;31m #####################################################################"
+echo -e "\x1B[1;31m ##                          \x1B[1;32mPHPMYADMIN                             \x1B[1;31m##"
+echo -e "\x1B[1;31m #####################################################################"
+echo -e "\x1B[1;31m ##                               ##                                ##"
+echo -e "\x1B[1;31m ##                               ##                                ##"
+echo -e "\x1B[1;31m ##          \x1B[1;32mroot                 \x1B[1;31m##            \x1B[1;32mpassword            \x1B[1;31m##"
+echo -e "\x1B[1;31m ##                               ##                                ##"
+echo -e "\x1B[1;31m ##                               ##                                ##"
+echo -e "\x1B[1;31m #####################################################################"
+echo -e "\x1B[1;31m ##                            \x1B[1;32mGRAFANA                              \x1B[1;31m##"
+echo -e "\x1B[1;31m #####################################################################"
+echo -e "\x1B[1;31m ##                               ##                                ##"
+echo -e "\x1B[1;31m ##                               ##                                ##"
+echo -e "\x1B[1;31m ##          \x1B[1;32madmin                \x1B[1;31m##             \x1B[1;32madmin              \x1B[1;31m##"
+echo -e "\x1B[1;31m ##                               ##                                ##"
+echo -e "\x1B[1;31m ##                               ##                                ##"
+echo -e "\x1B[1;31m #####################################################################"
 
 # Delete images?
 

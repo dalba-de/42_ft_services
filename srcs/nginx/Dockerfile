@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 # copy files
-COPY srcs/index.html srcs/nginx.conf srcs/setup.sh srcs/telegraf.conf srcs/Superhero.ttf ./
+COPY srcs/index.html srcs/nginx.conf srcs/setup.sh srcs/telegraf.conf ./
 
 # install nginx, ssl and ssh
 RUN apk update && apk add nginx openssl openssh;

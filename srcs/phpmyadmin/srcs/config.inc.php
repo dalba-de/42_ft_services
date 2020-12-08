@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 $cfg['blowfish_secret'] = ''; /* YOU MUST FILL IN THIS FOR COOKIE AUTH! */
 
 /* Ensure we got the environment */

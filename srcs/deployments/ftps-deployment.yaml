@@ -25,6 +25,14 @@ spec:
           name: pasv-min-port
         - containerPort: 10100
           name: pasv-max-port
+        livenessProbe:
+           exec:
+             command:
+             - /bin/ash
+             - -c
+             - 'pgrep telegraf && pgrep vsftpd'
+           initialDelaySeconds: 10
+           periodSeconds: 5
         env:
           - name: PASSWORD
             value: password

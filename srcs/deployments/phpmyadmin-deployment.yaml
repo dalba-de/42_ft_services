@@ -19,6 +19,14 @@ spec:
         - name: phpmyadmin
           image: my_phpmyadmin
           imagePullPolicy: Never
+          livenessProbe:
+            exec:
+              command:
+              - /bin/ash
+              - -c
+              - 'pgrep telegraf && pgrep php'
+            initialDelaySeconds: 10
+            periodSeconds: 5
           ports:
             - containerPort: 80
           env:

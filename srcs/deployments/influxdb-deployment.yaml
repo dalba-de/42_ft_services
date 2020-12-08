@@ -32,10 +32,14 @@ spec:
       - image: my_influxdb
         imagePullPolicy: Never
         name: influxdb
-        #lifecycle:
-        #    postStart:
-        #      exec:
-        #        command: ["influx", "-execute", "CREATE DATABASE telegraf"]
+        livenessProbe:
+           exec:
+             command:
+             - /bin/ash
+             - -c
+             - 'pgrep telegraf && pgrep influxd'
+           initialDelaySeconds: 10
+           periodSeconds: 5
         ports:
         - containerPort: 8086
           name: influxdb-port
